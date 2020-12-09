@@ -46,6 +46,7 @@ func main() {
 		}
 		server.Shutdown(context.Background())
 		signal.Stop(sigChan)
+		close(sigChan)
 		return nil
 	})
 
